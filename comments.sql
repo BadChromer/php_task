@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 26, 2022 at 07:36 PM
+-- Generation Time: Aug 27, 2022 at 09:19 AM
 -- Server version: 8.0.27
 -- PHP Version: 7.4.26
 
@@ -30,10 +30,11 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `comments`;
 CREATE TABLE IF NOT EXISTS `comments` (
   `postid` int NOT NULL,
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` text NOT NULL,
-  `email` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `body` text NOT NULL
+  `email` text NOT NULL,
+  `body` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 COMMIT;
 
